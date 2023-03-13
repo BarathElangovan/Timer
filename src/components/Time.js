@@ -3,11 +3,11 @@ import { useState } from "react";
 import "./time.css"
 
 export const Time = () => {
-    const now = new Date().toLocaleTimeString();
+    const now = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second:'numeric', hour12: true });
     const [time,setTime] = useState(now)
 
     const updateTime = () => {
-        const newtime = new Date().toLocaleTimeString()
+        const newtime = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second:'numeric', hour12: true });
         setTime(newtime)
     }
 
